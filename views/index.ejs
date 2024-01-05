@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form action="/extracttextfromimage" method="post" enctype="multipart/form-data">
+            <label for="file">Upload image file:</label>
+            <input type="file" name="file" accept="image/*" required id="">
+            <button class="btn btn-primary">Extract text</button>
+        </form>
+        <textarea class="form-control mt-3" cols="10" rows="10">
+            <%= text %>
+        </textarea>
+    </div>
+
+    <!-- Add Bootstrap JS (Popper.js and Bootstrap JS) -->
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
